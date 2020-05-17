@@ -9,15 +9,12 @@
         </div>
 
         <div>
-            <p>published: 14.06.2014,12:14</p>
-            <h2><a href="">My First Post</a></h2>
-            <p>Aenean eu leo quam. こんにちわ!　よろしくお願いします!</p>
+            {% for post in posts %}
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr}}</p>
+            {% endfor %}
         </div>
         
-        <div>
-            <p>公開日: 2014/06/14, 12:14</p>
-            <h2><a href="">二番目の投稿</a></h2>
-            <p>こんにちわ!　よろしくお願いします!</p>
-        </div>
     </body>
 </html>
